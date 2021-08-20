@@ -4,11 +4,154 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/static/css/style.css">
-  <title>Document</title>
+  <title>Portfolio-v2</title>
 </head>
 <body>
-  <h1>Home Page</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eligendi enim eveniet. Dolores quod numquam repellendus vitae, fugiat consequatur officia?</p>
+  <header>
+    <div class="toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Archives</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="section-header landing-header" style="background-image: url(/static/img/004.jpg);">
+      <h2>Psychedelic Monkey</h2>
+    </div>
+
+    <section class="about-me">
+      <img src="/static/img/006.jpg" alt="">
+      <div class="text">
+        <h2>Hi, I'm Psychedelic Monkey</h2>
+        <p class="subtitle">I'm a freelance photographer for hire</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste maiores cupiditate, officia libero amet dolor iusto beatae expedita tempore praesentium repellat ad esse illum id ducimus enim, recusandae facere fuga. Enim accusantium minima, corrupti non quam dolorum porro sequi ipsam eum assumenda voluptas aliquam provident, voluptate quis, dignissimos atque reiciendis consequuntur fuga ex maiores quasi animi! Nisi, quidem.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem illo dicta eos nostrum qui perspiciatis. Corporis, et facere reiciendis voluptas veritatis omnis odio repellendus, aperiam excepturi debitis totam! Commodi, quis.</p>
+      </div>
+    </section>
+
+    <div class="section-header" style="background-image: url(/static/img/003.jpg);">
+      <h2>Gallery</h2>
+    </div>
+
+    <section class="gallery">
+      <h2>Here's a preview of my work</h2>
+
+      <div class="gallery grid">
+        <a href="/static/img/001.jpg">
+          <img src="/static/img/001.jpg" alt="">
+        </a>
+        <a href="/static/img/002ds.jpg">
+          <img src="/static/img/002ds.jpg" alt="">
+        </a>
+        <a href="/static/img/003.jpg">
+          <img src="/static/img/003.jpg" alt="">
+        </a>
+        <a href="/static/img/004.jpg">
+          <img src="/static/img/004.jpg" alt="">
+        </a>
+        <a href="/static/img/005.jpg">
+          <img src="/static/img/005.jpg" alt="">
+        </a>
+        <a href="/static/img/006.jpg">
+          <img src="/static/img/006.jpg" alt="">
+        </a>
+      </div>
+    </section>
+
+    <div class="section-header" style="background-image: url(/static/img/004.jpg);">
+      <h2>Blog</h2>
+    </div>
+
+    <section class="blog">
+      <div class="preview">
+        <img src="/static/img/001.jpg" alt="">
+        <div class="text">
+          <h3>Blog Title</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+      <div class="preview">
+        <img src="/static/img/002.jpg" alt="">
+        <div class="text">
+          <h3>Blog Title</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+      <div class="preview">
+        <img src="/static/img/003.jpg" alt="">
+        <div class="text">
+          <h3>Blog Title</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+      <div class="preview">
+        <img src="/static/img/004.jpg" alt="">
+        <div class="text">
+          <h3>Blog Title</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-header" style="background-image: url(/static/img/006.jpg);">
+      <h2>Contact Me</h2>
+    </div>
+
+    <section class="contact">
+      <h2>I'm available for hire!</h2>
+
+      <div class="form">
+        <form action="#" method="post">
+          <div class="row">
+            <div class="col-50">
+              <input type="text" name="firstName" id="firstName" placeholder="First Name">
+            </div>
+            <div class="col-50">
+              <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-50">
+              <input type="text" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="col-50">
+              <input type="text" name="subject" id="subject" placeholder="Subject">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-100">
+              <textarea name="msg" id="msg"></textarea>
+            </div>
+          </div>
+          <input type="submit" value="Send Message">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="sm-links">
+      <i class="fab fa-facebook-square"></i>
+      <i class="fab fa-instagram-square"></i>
+      <i class="fab fa-snapchat-square"></i>
+      <i class="fab fa-twitter-square"></i>
+      <i class="fab fa-linkedin"></i>
+    </div>
+    <p>&copy; 2021 Psychedelic Monkey</p>
+  </footer>
 </body>
 </html>
