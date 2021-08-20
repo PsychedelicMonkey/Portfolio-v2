@@ -22,6 +22,22 @@ img {
   width: 100%;
 }
 
+.btn {
+  display: inline-block;
+  font-size: 1.3rem;
+  color: #f1f1f1;
+  background-color: #333;
+  text-decoration: none;
+  padding: 22px 32px;
+  margin: 26px auto;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: #333;
+  background-color: #f1f1f1;
+}
+
 // HEADER
 header {
   .toggle {
@@ -131,6 +147,8 @@ header {
   }
 }
 
+// ABOUT ME SECTION
+
 section {
   width: 65%;
   margin: 44px auto;
@@ -183,5 +201,35 @@ section {
     h2 {
       font-size: 1.6rem;
     }
+  }
+}
+
+// GALLERY SECTION
+
+.gallery {
+  text-align: center;
+
+  h2 {
+    font-size: 3.2rem;
+    margin-bottom: 42px;
+  }
+
+  @media(max-width: 500px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  gap: 22px;
+
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
   }
 }
