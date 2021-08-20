@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/css/lightgallery-bundle.min.css" integrity="sha512-rYeyP/7l5e89ap2He13nzhq2ksCEvohMZOdbMVTodaAkkQjDKXd4PVgkHy4AOLlFoJarfc8F2H854DjOQa5qdg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/static/css/style.css">
   <title>Portfolio-v2</title>
 </head>
@@ -156,6 +158,16 @@
     <p>&copy; 2021 Psychedelic Monkey</p>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/lightgallery.umd.min.js" integrity="sha512-bhp5inhvpiZEMQu00PslokW9GxKeMo445BHaXOstEjQjWPzNSIcx+iW8lDZ3Q/0SC5xTX/diqRi780nADXea0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/lightgallery.min.js" integrity="sha512-wS35bm4wRerHT4pd7T3W8ZVVtweBwkS/0TMhs7OoekrIAphl2nPqsFtbLQ1BPumsH3R/dkqvcBPA06SRtgyxyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/plugins/thumbnail/lg-thumbnail.umd.min.js" integrity="sha512-v+/cnd6XTt28XV37rip+QRMB9OTYr90c3TxqNLLZZSH7cfoirS2N6bt9HRvlbyRnhco/vBK5pUCJdaIpS+fuhw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-lb1dejulvDDLdybm5nKSQNq0ieqvAErJlunF6O0SICUZzF8UnXdQyrOyEnBzsGyQTXe5qnHeeFKJiCx3Kzo1Hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="/static/js/main.js"></script>
+  <script>
+    lightGallery(document.querySelector('.gallery-grid'), {
+      plugins: [lgThumbnail],
+      download: false,
+    })
+  </script>
 </body>
 </html>
