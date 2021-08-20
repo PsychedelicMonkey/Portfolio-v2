@@ -130,3 +130,58 @@ header {
     }
   }
 }
+
+section {
+  width: 65%;
+  margin: 44px auto;
+}
+
+@media(max-width: 800px) {
+  section {
+    width: 88%;
+  }
+}
+
+.about-me {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  padding: 20px;
+
+  h2 {
+    font-size: 2.6rem;
+    font-weight: 500;
+  }
+
+  .subtitle {
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+
+  img {
+    height: 460px;
+    object-fit: cover;
+  }
+
+  p {
+    margin: 14px 0;
+  }
+
+  @media(max-width: 800px) {
+    img {
+      height: 260px;
+    }
+  }
+}
+
+@media(max-width: 500px) {
+  .about-me {
+    grid-template-columns: 1fr;
+    padding: 0;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+}
