@@ -70,3 +70,63 @@ header {
     left: 0;
   }
 }
+
+// SECTION
+.section-header {
+  height: 45vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    color: #f9f9f9;
+    font-size: 5.4rem;
+    position: absolute;
+    z-index: 10;
+    text-shadow: 0 2px 5px rgba($color: #000000, $alpha: 1.0);
+  }
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #fff, $alpha: 0.35);
+}
+
+@media(max-width: 800px) {
+  .section-header {
+    height: 25vh;
+    background-attachment: initial;
+
+    h2 {
+      font-size: 3.4rem;
+    }
+  }
+}
+
+.landing-header {
+  height: 100vh;
+
+  h2 {
+    padding: 20px 30px;
+    background-color: #333;
+  }
+}
+
+@media(max-width: 500px) {
+  .landing-header {
+    h2 {
+      margin: 0 22px;
+    }
+  }
+}
