@@ -38,6 +38,12 @@ img {
   background-color: #f1f1f1;
 }
 
+.subtitle {
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
 // HEADER
 header {
   .toggle {
@@ -171,12 +177,6 @@ section {
     font-weight: 500;
   }
 
-  .subtitle {
-    font-style: italic;
-    font-size: 1.3rem;
-    font-weight: 300;
-  }
-
   img {
     height: 460px;
     object-fit: cover;
@@ -293,6 +293,103 @@ section {
       img {
         height: 220px;
       }
+    }
+  }
+}
+
+// CONTACT ME
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-size: 3.8rem;
+    margin-bottom: 22px;
+  }
+
+  .subtitle {
+    width: 80%;
+    margin-bottom: 52px;
+  }
+
+  .form {
+    background-color: #f9f9f9;
+    width: 80%;
+    padding: 40px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .col-50 {
+    width: 50%;
+    margin: 0 10px;
+  }
+
+  .col-100 {
+    width: 100%;
+    margin: 0 10px;
+  }
+
+  .row input, textarea {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.3rem;
+    border: 1px solid #777;
+    outline: none;
+    resize: none;
+  }
+
+  .row textarea {
+    height: 200px;
+  }
+
+  input[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    padding: 14px 10px;
+    font-size: 1.4rem;
+    color: #f1f1f1;
+    background-color: rgb(63, 63, 211);
+    margin-top: 22px;
+    border: none;
+    transition: 0.3s;
+  }
+
+  input[type="submit"]:hover {
+    color: rgb(63, 63, 211);
+    background-color: #f1f1f1;
+  }
+
+  @media(max-width: 500px) {
+    h2 {
+      font-size: 2.0rem;
+    }
+
+    .form {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .col-50 {
+      width: 100%;
+      margin: 10px 0;
     }
   }
 }
