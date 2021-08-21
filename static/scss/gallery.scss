@@ -1,0 +1,64 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      display: none;
+      color: #fff;
+      position: absolute;
+      margin: auto;
+      font-size: 2.3rem;
+      width: 90%;
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+  }
+
+  a:hover > img {
+    filter: brightness(20%);
+  }
+
+  a:hover > h3 {
+    display: flex;
+  }
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+}
+
+@media(max-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .btns {
+    flex-direction: column;
+
+    .btn {
+      margin: 12px auto 2px;
+    }
+  }
+}
