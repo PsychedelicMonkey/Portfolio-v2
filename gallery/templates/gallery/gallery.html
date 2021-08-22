@@ -1,0 +1,24 @@
+{% extends "gallery/base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="gallery gallery-grid">
+  {% for photo in photos %}
+  <a href="{{ photo.image.url }}">
+    <img src="{{ photo.image.url }}" alt="">
+    {% if photo.title %}
+      <h3>{{ photo.title }}</h3>
+    {% endif %}
+  </a>
+  {% endfor %}
+</div>
+
+<div class="btns">
+  <a href="#" class="btn">Previous Page</a>
+  <a href="#" class="btn">Next Page</a>
+</div>
+{% endblock %}

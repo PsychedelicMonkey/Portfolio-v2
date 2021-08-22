@@ -1,5 +1,7 @@
+from typing import List
 from django.shortcuts import redirect, render
 from django.core.mail import send_mail
+from django.views.generic import ListView
 from .forms import EmailForm
 from .models import Photo
 
@@ -24,3 +26,9 @@ def index(request):
     'photos': photos,
   }
   return render(request, 'gallery/index.html', context)
+
+class GalleryView(ListView):
+  model = Photo
+  ordering = '-created_at'
+  template_name = 'gallery/gallery.html'
+  context_object_name = 'photos'

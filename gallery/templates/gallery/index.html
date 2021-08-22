@@ -1,6 +1,10 @@
 {% extends "gallery/base.html" %}
 {% load static %}
 
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="section-header landing-header" style="background-image: url({% static 'img/004.jpg' %});">
   <h2>Psychedelic Monkey</h2>
@@ -31,7 +35,7 @@
     {% endfor %}
   </div>
 
-  <a href="#" class="btn">See More Photos</a>
+  <a href="{% url 'gallery' %}" class="btn">See More Photos</a>
 </section>
 
 <div class="section-header" style="background-image: url({% static 'img/004.jpg' %});">
