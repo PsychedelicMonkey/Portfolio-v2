@@ -82,26 +82,27 @@
   <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, illum maiores inventore repellat totam dolor cumque veritatis impedit obcaecati fugit!</p>
 
   <div class="form">
-    <form action="#" method="post">
+    <form action="/" method="post">
+      {% csrf_token %}
       <div class="row">
         <div class="col-50">
-          <input type="text" name="firstName" id="firstName" placeholder="First Name">
+          {{ form.first_name }}
         </div>
         <div class="col-50">
-          <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+          {{ form.last_name }}
         </div>
       </div>
       <div class="row">
         <div class="col-50">
-          <input type="text" name="email" id="email" placeholder="Email">
+          {{ form.email }}
         </div>
         <div class="col-50">
-          <input type="text" name="subject" id="subject" placeholder="Subject">
+          {{ form.subject }}
         </div>
       </div>
       <div class="row">
         <div class="col-100">
-          <textarea name="msg" id="msg" placeholder="Message"></textarea>
+          {{ form.body }}
         </div>
       </div>
       <input type="submit" value="Send Message">
