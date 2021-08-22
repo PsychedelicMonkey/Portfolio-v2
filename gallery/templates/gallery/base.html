@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/css/lg-autoplay.min.css" integrity="sha512-LlHSkMTvyRwh1YjzXwk6bxjdt3huGhCyK1vlCC6f7Db/g+2sYXz2YNasyZHnMUgykqPksmD/44DIINhqpWBjig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/css/lg-fullscreen.min.css" integrity="sha512-JlgW3xkdBcsdFiSfFk5Cfj3sTgo3hA63/lPmZ4SXJegICSLcH43BuwDNlC9fqoUy2h3Tma8Eo48xlZ5XMjM+aQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/css/lg-zoom.min.css" integrity="sha512-SGo05yQXwPFKXE+GtWCn7J4OZQBaQIakZSxQSqUyVWqO0TAv3gaF/Vox1FmG4IyXJWDwu/lXzXqPOnfX1va0+A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/static/css/style.css">
-  <link rel="stylesheet" href="/static/css/index.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
   <title>Portfolio-v2</title>
 </head>
 <body>
@@ -31,125 +32,7 @@
   </header>
 
   <main>
-    <div class="section-header landing-header" style="background-image: url(/static/img/004.jpg);">
-      <h2>Psychedelic Monkey</h2>
-    </div>
-
-    <section class="about-me">
-      <img src="/static/img/006.jpg" alt="">
-      <div class="text">
-        <h2>Hi, I'm Psychedelic Monkey</h2>
-        <p class="subtitle">I'm a freelance photographer for hire</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste maiores cupiditate, officia libero amet dolor iusto beatae expedita tempore praesentium repellat ad esse illum id ducimus enim, recusandae facere fuga. Enim accusantium minima, corrupti non quam dolorum porro sequi ipsam eum assumenda voluptas aliquam provident, voluptate quis, dignissimos atque reiciendis consequuntur fuga ex maiores quasi animi! Nisi, quidem.</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem illo dicta eos nostrum qui perspiciatis. Corporis, et facere reiciendis voluptas veritatis omnis odio repellendus, aperiam excepturi debitis totam! Commodi, quis.</p>
-      </div>
-    </section>
-
-    <div class="section-header" style="background-image: url(/static/img/003.jpg);">
-      <h2>Gallery</h2>
-    </div>
-
-    <section class="gallery">
-      <h2>Here's a preview of my work</h2>
-
-      <div class="gallery-grid">
-        <a href="/static/img/001.jpg">
-          <img src="/static/img/001.jpg" alt="">
-        </a>
-        <a href="/static/img/002.jpg">
-          <img src="/static/img/002.jpg" alt="">
-        </a>
-        <a href="/static/img/003.jpg">
-          <img src="/static/img/003.jpg" alt="">
-        </a>
-        <a href="/static/img/004.jpg">
-          <img src="/static/img/004.jpg" alt="">
-        </a>
-        <a href="/static/img/005.jpg">
-          <img src="/static/img/005.jpg" alt="">
-        </a>
-        <a href="/static/img/006.jpg">
-          <img src="/static/img/006.jpg" alt="">
-        </a>
-      </div>
-
-      <a href="#" class="btn">See More Photos</a>
-    </section>
-
-    <div class="section-header" style="background-image: url(/static/img/004.jpg);">
-      <h2>Blog</h2>
-    </div>
-
-    <section class="blog">
-      <div class="preview">
-        <img src="/static/img/001.jpg" alt="">
-        <div class="text">
-          <h3>Blog Title</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-      </div>
-      <div class="preview">
-        <img src="/static/img/002.jpg" alt="">
-        <div class="text">
-          <h3>Blog Title</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-      </div>
-      <div class="preview">
-        <img src="/static/img/003.jpg" alt="">
-        <div class="text">
-          <h3>Blog Title</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-      </div>
-      <div class="preview">
-        <img src="/static/img/004.jpg" alt="">
-        <div class="text">
-          <h3>Blog Title</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
-          <a href="#" class="btn">Read More</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-header" style="background-image: url(/static/img/006.jpg);">
-      <h2>Contact Me</h2>
-    </div>
-
-    <section class="contact">
-      <h2>I'm available for hire!</h2>
-      <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, illum maiores inventore repellat totam dolor cumque veritatis impedit obcaecati fugit!</p>
-
-      <div class="form">
-        <form action="#" method="post">
-          <div class="row">
-            <div class="col-50">
-              <input type="text" name="firstName" id="firstName" placeholder="First Name">
-            </div>
-            <div class="col-50">
-              <input type="text" name="lastName" id="lastName" placeholder="Last Name">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-50">
-              <input type="text" name="email" id="email" placeholder="Email">
-            </div>
-            <div class="col-50">
-              <input type="text" name="subject" id="subject" placeholder="Subject">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-100">
-              <textarea name="msg" id="msg" placeholder="Message"></textarea>
-            </div>
-          </div>
-          <input type="submit" value="Send Message">
-        </form>
-      </div>
-    </section>
+    {% block content %}{% endblock %}
   </main>
 
   <footer>
@@ -173,7 +56,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/plugins/fullscreen/lg-fullscreen.min.js" integrity="sha512-GfxKtGD9fXFMB/ctXsy8UNd7lGoFLqluvAbWqz3bRfWruc3EsyW9txeFIXUPKdk3jgah9SZteZt3OSV2sdRBJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/plugins/zoom/lg-zoom.umd.min.js" integrity="sha512-mDd2qoh/FeskZ95fjdvG2vlbq37UCiwfEkyoap1Vub9g8rBdd3ETzVp+AlLwV+pGVdXZCFjFIbsHq5zHvEO4Ng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.2.0/plugins/zoom/lg-zoom.min.js" integrity="sha512-xWb9PdluFVMUplDHeQ7f48sgl8nx6+OfjvNJ1QKiVDeHQaoFndokj4GtbVjRomwruTNFALUcExNVjzlKy8HF0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="/static/js/main.js"></script>
+  <script src="{% static 'js/main.js' %}"></script>
   <script>
     lightGallery(document.querySelector('.gallery-grid'), {
       plugins: [lgFullscreen, lgThumbnail, lgZoom, lgAutoplay],
