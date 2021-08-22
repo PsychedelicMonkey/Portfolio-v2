@@ -38,6 +38,18 @@ img {
   background-color: #f1f1f1;
 }
 
+@media(max-width: 500px) {
+  .btns {
+    flex-direction: column;
+
+    .btn {
+      font-size: 1.1rem;
+      padding: 12px 22px;
+      margin-top: -12px;
+    }
+  }
+}
+
 .subtitle {
   font-style: italic;
   font-size: 1.3rem;
