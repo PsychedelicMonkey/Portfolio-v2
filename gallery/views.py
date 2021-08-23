@@ -32,6 +32,7 @@ class GalleryView(ListView):
   ordering = '-created_at'
   template_name = 'gallery/gallery.html'
   context_object_name = 'photos'
+  paginate_by = 30
 
 class CategoryView(ListView):
   model = Category
