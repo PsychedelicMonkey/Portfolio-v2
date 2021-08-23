@@ -44,6 +44,7 @@ class CategoryPhotoView(ListView):
   model = Photo
   template_name = 'gallery/gallery.html'
   context_object_name = 'photos'
+  paginate_by = 30
 
   def get_queryset(self):
     category = get_object_or_404(Category, name=self.kwargs.get('name'))
