@@ -14,13 +14,16 @@
       img {
         height: 480px;
         object-fit: cover;
+        box-shadow: 2px 3px 5px rgba($color: #000000, $alpha: 0.15);
       }
 
       h3 {
+        margin-top: 10px;
         font-size: 2.4rem;
       }
 
       .date {
+        font-weight: 500;
         margin: 15px 0;
       }
     }
@@ -39,6 +42,13 @@
 
   aside {
     width: 30%;
+  }
+}
+
+.post-body {
+  p {
+    font-size: 1.2rem;
+    margin: 22px 0;
   }
 }
 
@@ -107,5 +117,23 @@
 @media(max-width: 500px) {
   .sidebar {
     margin: -22px;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  gap: 22px;
+
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.3s;
+  }
+
+  img:hover {
+    box-shadow: 2px 5px 10px rgba($color: #000000, $alpha: 0.5);
   }
 }

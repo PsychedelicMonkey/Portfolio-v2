@@ -1,0 +1,48 @@
+{% extends "gallery/base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="section-header" style="background-image: url(/static/img/004.jpg);">
+  <h2>Blog</h2>
+</div>
+
+<div class="container">
+  <section class="blog">
+    {% for post in posts %}
+    <div class="preview">
+      <img src="{{ post.photos.first.image.url }}" alt="">
+      <div class="text">
+        <h3>{{ post.title }}</h3>
+        <p class="date">{{ post.created_at|date:"M d, Y" }}</p>
+        <p>{{ post.body|truncatechars:255 }}</p>
+        <a href="{% url 'post-detail' post.pk %}" class="btn">Read More</a>
+      </div>
+    </div>
+    {% endfor %}
+    
+    {% include "gallery/_paginator.html" %}
+  </section>
+  <aside class="sidebar">
+    <h2>Archive</h2>
+    <ul>
+      <li class="active">
+        2021
+        <ul>
+          <li class="active">Aug</li>
+          <li><a href="#">June</a></li>
+          <li><a href="#">April</a></li>
+          <li><a href="#">March</a></li>
+        </ul>
+      </li>
+      <li><a href="#">2020</a></li>
+      <li><a href="#">2019</a></li>
+      <li><a href="#">2018</a></li>
+      <li><a href="#">2017</a></li>
+    </ul>
+  </aside>
+</div>
+{% endblock %}

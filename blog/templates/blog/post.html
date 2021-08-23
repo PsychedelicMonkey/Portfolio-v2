@@ -1,0 +1,54 @@
+{% extends "gallery/base.html" %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <section class="blog">
+    <div class="preview" style="border: none;">
+      <img src="{{ post.photos.first.image.url }}" alt="">
+      <div class="text">
+        <h3>{{ post.title }}</h3>
+        <p class="date">{{ post.created_at|date:"M d, Y" }}</p>
+        <p class="date">Last Updated: {{ post.updated_at|date:"M d, Y" }}</p>
+        <div class="post-body">
+          {{ post.body|linebreaks }}
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  
+  <aside class="sidebar">
+    <h2>Archive</h2>
+    <ul>
+      <li class="active">
+        2021
+        <ul>
+          <li class="active">Aug</li>
+          <li><a href="#">June</a></li>
+          <li><a href="#">April</a></li>
+          <li><a href="#">March</a></li>
+        </ul>
+      </li>
+      <li><a href="#">2020</a></li>
+      <li><a href="#">2019</a></li>
+      <li><a href="#">2018</a></li>
+      <li><a href="#">2017</a></li>
+    </ul>
+  </aside>
+</div>
+
+<section class="gallery">
+  <div class="gallery-grid">
+    {% for photo in post.photos.all %}
+    <a href="{{ photo.image.url }}">
+      <img src="{{ photo.image.url }}" alt="">
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
