@@ -4,6 +4,7 @@ from django.core.mail import send_mail
 from django.views.generic import ListView
 from .forms import EmailForm
 from .models import Category, Photo
+from blog.models import Post
 
 def index(request):
   if request.POST:
@@ -20,10 +21,12 @@ def index(request):
   else:
     form = EmailForm()
   photos = Photo.objects.all()[:8]
+  posts = Post.objects.all().order_by('-created_at')[:4]
   context = {
     'title': 'Home',
     'form': form,
     'photos': photos,
+    'posts': posts,
   }
   return render(request, 'gallery/index.html', context)
 

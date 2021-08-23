@@ -43,38 +43,17 @@
 </div>
 
 <section class="blog">
+  {% for post in posts %}
   <div class="preview">
-    <img src="{% static 'img/001.jpg' %}" alt="">
+    <img src="{{ post.photos.first.image.url }}" alt="">
     <div class="text">
-      <h3>Blog Title</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
-      <a href="#" class="btn">Read More</a>
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.body|truncatechars:255 }}</p>
+      <a href="{% url 'post-detail' post.pk %}" class="btn">Read More</a>
     </div>
   </div>
-  <div class="preview">
-    <img src="{% static 'img/002.jpg' %}" alt="">
-    <div class="text">
-      <h3>Blog Title</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
-      <a href="#" class="btn">Read More</a>
-    </div>
-  </div>
-  <div class="preview">
-    <img src="{% static 'img/003.jpg' %}" alt="">
-    <div class="text">
-      <h3>Blog Title</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
-      <a href="#" class="btn">Read More</a>
-    </div>
-  </div>
-  <div class="preview">
-    <img src="{% static 'img/004.jpg' %}" alt="">
-    <div class="text">
-      <h3>Blog Title</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique laborum unde praesentium consequatur. Magnam eius at architecto aspernatur! Architecto, consequuntur.</p>
-      <a href="#" class="btn">Read More</a>
-    </div>
-  </div>
+  {% endfor %}
+  <a href="{% url 'blog' %}" class="btn">Read my blog</a>
 </section>
 
 <div class="section-header" style="background-image: url({% static 'img/006.jpg' %});">
