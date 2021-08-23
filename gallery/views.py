@@ -1,9 +1,9 @@
 from typing import List
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.core.mail import send_mail
 from django.views.generic import ListView
 from .forms import EmailForm
-from .models import Photo
+from .models import Category, Photo
 
 def index(request):
   if request.POST:
@@ -32,3 +32,18 @@ class GalleryView(ListView):
   ordering = '-created_at'
   template_name = 'gallery/gallery.html'
   context_object_name = 'photos'
+
+class CategoryView(ListView):
+  model = Category
+  ordering = 'name'
+  template_name = 'gallery/category.html'
+  context_object_name = 'categories'
+
+class CategoryPhotoView(ListView):
+  model = Photo
+  template_name = 'gallery/gallery.html'
+  context_object_name = 'photos'
+
+  def get_queryset(self):
+    category = get_object_or_404(Category, name=self.kwargs.get('name'))
+    return Photo.objects.filter(categories=category).order_by('-created_at')
