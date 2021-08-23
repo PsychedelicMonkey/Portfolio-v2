@@ -7,25 +7,26 @@
 
 {% block content %}
 <div class="section-header" style="background-image: url(/static/img/004.jpg);">
-  <h2>Blog</h2>
+  <h2>{{ year }}</h2>
 </div>
 
 <div class="container">
   <section class="blog">
-    {% for post in posts %}
+    {% for obj in object_list %}
     <div class="preview">
-      <img src="{{ post.photos.first.image.url }}" alt="">
+      <img src="{{ obj.photos.first.image.url }}" alt="">
       <div class="text">
-        <h3>{{ post.title }}</h3>
-        <p class="date">{{ post.created_at|date:"M d, Y" }}</p>
-        <p>{{ post.body|truncatechars:255 }}</p>
-        <a href="{% url 'post-detail' post.pk %}" class="btn">Read More</a>
+        <h3>{{ obj.title }}</h3>
+        <p class="date">{{ obj.created_at|date:"M d, Y" }}</p>
+        <p>{{ obj.body|truncatechars:255 }}</p>
+        <a href="{% url 'post-detail' obj.pk %}" class="btn">Read More</a>
       </div>
     </div>
     {% endfor %}
 
     {% include "gallery/_paginator.html" %}
   </section>
+
   {% include "blog/_archive_sidebar.html" %}
 </div>
 {% endblock %}

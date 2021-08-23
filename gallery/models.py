@@ -3,7 +3,7 @@ from django.db import models
 class Category(models.Model):
   name = models.CharField(max_length=100, null=False, blank=False)
   description = models.TextField(null=True, blank=True)
-  cover_image = models.ForeignKey('Photo', on_delete=models.CASCADE)
+  cover_image = models.ForeignKey('Photo', on_delete=models.CASCADE, null=True, blank=True)
   created_at = models.DateTimeField(auto_now_add=True)
 
   def __str__(self):
@@ -15,4 +15,4 @@ class Photo(models.Model):
   image = models.ImageField(null=False, blank=False)
   created_at = models.DateTimeField(auto_now_add=True)
 
-  categories = models.ManyToManyField(Category)
+  categories = models.ManyToManyField(Category, blank=True)

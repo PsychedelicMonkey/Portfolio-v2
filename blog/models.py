@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 from gallery.models import Photo
 
 class Post(models.Model):
@@ -9,8 +10,13 @@ class Post(models.Model):
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)
 
+  created_at.editable = True
+
   photos = models.ManyToManyField(Photo, related_name='post')
 
   def __str__(self):
     return self.title
+
+  def get_absoulte_url(self):
+    return reverse('post-detail', kwargs={'pk': self.pk})
   

@@ -1,0 +1,17 @@
+<aside class="sidebar">
+  <h2>Archive</h2>
+  {% regroup all_posts by created_at.year as year_list %}
+  <ul>
+    {% for y in year_list %}
+    <li><a href="{% url 'post-year-archive' y.grouper %}">{{ y.grouper }}</a>
+      {% if year == y.grouper %}
+      {% regroup y.list by created_at.month as month_list %}
+      <ul>
+        {% for month in month_list %}
+        <li><a href="{% url 'post-month-archive' y.grouper month.list.0.created_at|date:'m' %}">{{ month.list.0.created_at|date:"F" }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</aside>

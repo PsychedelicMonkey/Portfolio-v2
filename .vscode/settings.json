@@ -7,7 +7,5 @@
       "savePath": "/static/css"
     }
   ],
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "html.format.templating": true
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
