@@ -4,6 +4,7 @@ from .models import Post
 
 class PostList(ListView):
   model = Post
+  ordering = '-created_at'
   queryset = Post.objects.all()
   date_field = 'created_at'
   context_object_name = 'posts'
